@@ -25,9 +25,33 @@ only in development mode.
 1. Connections to the `keycloak` endpoints fail with "502 Bad Gateway".
 1. The `python` app's `Dockerfile` does not follow best practices.
 
+### Fixed issues
+
+* The /app login endpoint was broken because of a typo (/loogin) in the app.py 
+
+* The Keycloak endpoints were failing since the nginx redirects was configured to reach the service with the wrong port instead of 8080 it was mentioned 8090.
+
+_Add On_
+
+ As an improvement we could also reduce the length of nginx file but moving the server block out to different file from the main config file.
+
+ As a common best practices it is wise to move the gunicorn paramenter as a separate module so the issue during cmd and entrypoint will be completed resolved in future.
+
+
 ### Notes
 
 1. Any `git` commits should follow the
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 specifications.
 1. `git` formatted patches are preferred.
+
+
+## <font color = "red"> Follow-Me </font>
+
+[![Portfolio](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/premkumar-palanichamy)
+
+<p align="left">
+<a href="https://linkedin.com/in/premkumarpalanichamy" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="premkumarpalanichamy" height="25" width="25" /></a>
+</p>
+
+[![youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCJKEn6HeAxRNirDMBwFfi3w)
